@@ -65,7 +65,7 @@ class PooledConnection:
         """Check if connection has been idle too long.
         
         Args:
-            idle_timeout: Idle timeout in seconds
+            idle_timeout: Idle timeout must be in seconds
             
         Returns:
             True if connection should be closed
