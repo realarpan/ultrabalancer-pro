@@ -255,7 +255,6 @@ class Router:
         await asyncio.gather(*(p.on_shutdown(self) for p in self._plugins if hasattr(p, "on_shutdown")))
         self._started = False
 
-    # Dispatch
     async def dispatch(self, scope: Scope, headers: Headers, method: str, path: str) -> Any:
         method = method.upper()
         found = self._trie.find(method, path)
